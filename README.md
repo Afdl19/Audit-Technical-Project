@@ -2,16 +2,20 @@
 **Automated Internal Controls for Multinational Freight Operations**
 
 ## 📌 Project Overview
-This project simulates a forensic audit for a London-headquartered logistics firm. It bridges the gap between traditional accounting and data science by automating the detection of financial leakage across international branches (Paris, New York, Rotterdam).
+This repository contains a full-population forensic audit tool designed for a London-headquartered logistics firm. Instead of traditional "sampling," this tool uses Python and SQL to analyze every transaction across UK, EU, and US entities to identify financial leakage and internal control failures.
 
-## 🚀 Key Features
-- **Multi-Currency Consolidation:** Normalizing USD, EUR, and SGD into GBP.
-- **Forensic Testing:** Implementing **Benford's Law** to detect unnatural transaction patterns.
-- **Internal Control Automation:** Identifying "Split-Billing" and unauthorized high-value spends.
-- **Risk Visualization:** Executive dashboards showing regional exposure.
+## 🚀 Key Modules
+- **Currency Normalization:** Automated FX conversion of EUR, USD, and SGD into GBP reporting currency.
+- **Forensic Engine:** Implementation of **Benford's Law** to detect statistically unnatural financial patterns.
+- **Threshold Audit:** SQL-driven identification of unauthorized expenditures exceeding managerial limits (£100k).
+- **Split-Billing Detection:** Logic to catch vendors bypassing approval limits through fragmented invoicing.
 
-## 🛠️ Tech Stack
-- **Language:** Python 3.x (Pandas, NumPy)
+## 🛠️ Technical Stack
+- **Languages:** Python (Pandas, NumPy, Matplotlib)
 - **Database:** SQL (SQLite3)
-- **Environment:** Google Colab (Optimized for ChromeOS)
-- **Reporting:** WeasyPrint / Matplotlib
+- **Methodology:** Forensic Accounting, Data Integrity Auditing, Risk Management.
+
+## 📁 Repository Structure
+- `/Forensic_Audit_Engine.ipynb`: Full code, calculations, and data processing.
+- `/METHODOLOGY.md`: Detailed breakdown of the accounting logic and formulas used.
+- `/reports/Final_Audit_Report.pdf`: Executive-level summary of findings and visualizations.
