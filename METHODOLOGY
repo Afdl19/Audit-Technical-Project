@@ -1,0 +1,19 @@
+# Audit Methodology & Quantitative Logic
+
+### 1. Data Normalization (FX Risk)
+To ensure material consistency, all transactions are converted using a centralized exchange rate dictionary.
+- **Formula:** `Amount_GBP = Local_Amount * FX_Rate`
+
+### 2. Forensic Analysis (Benford's Law)
+We apply the logarithmic distribution test to the first significant digit of all invoices. 
+- **Mathematical Basis:** $P(d) = \log_{10}(1 + \frac{1}{d})$
+- **Goal:** Identify "man-made" numbers that deviate from natural statistical patterns.
+
+### 3. Threshold & Authority Logic
+The system audits the `Approver` vs `Amount` relationship. 
+- **Rule:** Any transaction > £100,000 without a `Director_X` signature is flagged as a **Critical Control Failure**.
+
+### 4. SQL Detection Patterns
+We utilize Common Table Expressions (CTEs) and Grouping to find:
+- **Duplicates:** Identical vendor/ref/amount clusters.
+- **Split-Billing:** Multiple invoices from one vendor that aggregate to exceed approval limits.
