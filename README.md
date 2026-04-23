@@ -1,19 +1,17 @@
 # 🛡️ Global Financial Audit & Forensic System
-A Python-SQL framework for automated internal controls in multinational freight operations.
+**Automated Internal Controls for Multinational Freight Operations**
 
-## 📊 Business Context
-In global logistics, fragmented systems across different regions (UK, EU, US) often lead to "Financial Leakage." This project simulates a London-based HQ auditing its global entities to detect:
-* **Currency Inconsistencies:** Normalizing USD/EUR to GBP.
-* **Internal Control Gaps:** Flagging unauthorized spends >£100k.
-* **Fraudulent Patterns:** Using Benford's Law to detect unnatural ledger entries.
+## 📌 Project Overview
+This project simulates a forensic audit for a London-headquartered logistics firm. It bridges the gap between traditional accounting and data science by automating the detection of financial leakage across international branches (Paris, New York, Rotterdam).
+
+## 🚀 Key Features
+- **Multi-Currency Consolidation:** Normalizing USD, EUR, and SGD into GBP.
+- **Forensic Testing:** Implementing **Benford's Law** to detect unnatural transaction patterns.
+- **Internal Control Automation:** Identifying "Split-Billing" and unauthorized high-value spends.
+- **Risk Visualization:** Executive dashboards showing regional exposure.
 
 ## 🛠️ Tech Stack
-* **Language:** Python (Pandas, NumPy)
-* **Database:** SQL (SQLite)
-* **Visuals:** Matplotlib, Seaborn
-* **Environment:** Google Colab / ChromeOS
-
-## 🔍 Audit Logic
-1. **Benford's Law:** P(d) = log10(1 + 1/d) to catch fictitious invoicing.
-2. **Split-Billing Detection:** SQL grouping to find threshold circumvention.
-3. **Temporal Analysis:** Isolating high-risk weekend transactions.
+- **Language:** Python 3.x (Pandas, NumPy)
+- **Database:** SQL (SQLite3)
+- **Environment:** Google Colab (Optimized for ChromeOS)
+- **Reporting:** WeasyPrint / Matplotlib
